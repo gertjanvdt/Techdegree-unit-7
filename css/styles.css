@@ -1,0 +1,110 @@
+* {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+/* Whole page controls */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header"
+        "navigation"
+        "main";
+    max-width: 100%;
+}
+
+h3 {
+    margin: 1.5em 2em;
+    text-transform: uppercase;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header and navigation */
+header {
+    background: #a1a09d;
+    color: white;
+    grid-area: header;
+} 
+
+.small {
+    border-radius: 50%;
+    max-width: 50px;
+}
+
+.navigation {
+    grid-area: navigation;
+    background: #403f3e;
+    color: white;
+}
+
+/* Main area with graphs */
+
+main {
+    grid-area: main;
+}
+
+/* Traffic graph */
+.traffic-header {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    padding: 0 1em;
+}
+
+/* Social stats section */
+
+.social-container {
+    border: 2px solid #403f3e;
+    max-width: 60%;
+    margin: 1em auto;
+    display: flex;
+    align-items: center;
+    background: #f2f2f2 ;
+    border-radius: 8px;
+}
+
+.social-container img {
+    margin: 1em;
+}
+
+.social-name {
+    color: purple;
+    font-weight: 1000;
+    margin: .2em;
+}
+
+.social-number {
+    font-size: 2em;
+    margin: .2em;
+}
+
+/* User blocks */
+
+.member,
+.user-activity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.member img,
+.user-activity img {
+    margin: .3em .3em;
+}
+
+.member p {
+   margin: .3em
+}

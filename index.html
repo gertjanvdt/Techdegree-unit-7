@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourApp homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="grid-container">
+    <!-- Header of app with appname, profile pic and name -->
+    <header>
+        <h1>YourApp</h1>
+        <div class="bell-icon">
+            <!-- <img src="icons/icon-bell.svg" alt="bell-icon"> -->
+        </div>
+        <img src="images/profile_pic.jpeg" alt="user-img" class="small">
+        <h4>Gertjan van der Toorn</h4>
+    </header>
+
+    <main>
+        <!-- Nav bar with svg icons -->
+        <nav class="navigation">
+            <a href="#"><img src="" alt="calendar"></a>
+            <a href="#"><img src="" alt="people"></a>
+            <a href="#"><img src="" alt="stats"></a>
+            <a href="#"><img src="" alt="settings"></a>
+        </nav>
+
+        <!-- Dashboard header and searchbar -->
+        <div class="main-header">
+            <h2 class="headline">Dashboard</h2>
+            <div class="main-header-search">
+                <input type="search" id="search-bar" class="search-bar" placeholder="Search">
+            </div>
+        </div>
+
+        <!-- alert banner -->
+        <div class="alert" id="alert">
+            <!-- JS will insert alart here -->
+        </div>
+
+        <!-- main traffic chart -->
+        <section class="traffic">
+            <div class="traffic-header">
+                <h3>traffic</h3>
+                <ul>
+                    <li class="traffic-nav-link">Hourly</li>
+                    <li class="traffic-nav-link">Daily</li>
+                    <li class="traffic-nav-link active">Weekly</li>
+                    <li class="traffic-nav-link">Monthly</li>
+                </ul>
+            </div>
+            <div class="widget-container-full">
+                <!-- element line graph will attach to -->
+                <canvas id="traffic-chart"></canvas>
+                <img src="images/traffic-graph.png" alt="">
+            </div>
+        </section>
+
+        <!-- Daily traffic graph -->
+        <section class="daily">
+            <h3>daily traffic</h3>
+
+            <div class="widget-container-half">
+                <canvas id="daily-chart"></canvas>
+                <img src="images/daily-graph.png" alt="">
+            </div>
+        </section>
+            
+
+        <!-- Mobile user graph -->
+        <section class="mobile">
+            <h3>daily traffic</h3>
+
+            <div class="widget-container-half">
+                <canvas id="mobile-chart"></canvas>
+                <img src="images/mobile-graph.png" alt="">
+            </div>
+        </section>
+
+        <!-- Social stats graph -->
+        <section class="social-stats">
+            <h3>social stats</h3>
+            <div class="social-container">
+                <div class="social-image">
+                    <!-- image of social media goes here -->
+                    <img src="images/twitter-logo.png" alt="" class="small">
+                </div>
+                <div class="social-text">
+                    <p class="social-name">Twitter</p>
+                    <p class="social-number">12,809</p>
+                </div>
+            </div>
+
+            <div class="social-container">
+                <div class="social-image">
+                    <!-- image of social media goes here -->
+                    <img src="images/facebook-logo.png" alt="" class="small">
+                </div>
+                <div class="social-text">
+                    <p class="social-name">Facebook</p>
+                    <p class="social-number">9,325</p>
+                </div>
+            </div>
+
+            <div class="social-container">
+                <div class="social-image">
+                    <!-- image of social media goes here -->
+                    <img src="images/google-logo.png" alt="" class="small">
+                </div>
+                <div class="social-text">
+                    <p class="social-name">Google+</p>
+                    <p class="social-number">3,725</p>
+                </div>
+            </div>
+
+        </section>
+            
+
+        <!-- New members overview -->
+       <section class="new-members">
+            <h3>new members</h3>
+
+            <div class="member">
+                <img src="images/member-1.jpg" alt="member-1" class="small">
+                <div>
+                    <p>Victoria Chambers</p>
+                    <a href="" class="member-email">victoria.chambers@yourapp.com</a>
+                </div>  
+                <p>19/8/2020</p>
+                <hr>
+            </div>
+            
+            <div class="member">      
+                <img src="images/member-2.jpg" alt="member-2" class="small">
+                <div>
+                    <p>Dale Byrd</p>
+                    <a href="" class="member-email">dale.byrd@yourapp.com</a>
+                </div>  
+                <p>19/8/2020</p>
+                <hr>
+            </div>  
+            
+            <div class="member">
+                <img src="images/member-3.jpg" alt="member-3" class="small">
+                <div>
+                    <p>Dawn Wood</p>
+                    <a href="" class="member-email">dawn.wood@yourapp.com</a>
+                </div>
+                <p>19/8/2020</p>
+                <hr>
+            </div>        
+            
+            <div class="member">
+                <img src="images/member-4.jpg" alt="member-4" class="small">
+                <div>
+                    <p>Dan Oliver</p>
+                    <a href="" class="member-email">dan.oliverd@yourapp.com</a>
+                </div>
+                <p>19/8/2020</p>
+            </div>
+        </section>
+
+        <!-- Recent user activity -->
+        <section class="recent-activity">
+            <h3>recent activity</h3>
+
+            <div class="user-activity">
+                <img src="images/member-1.jpg" alt="member-1" class="small">
+                <div>
+                    <p>Victoria Chambers commented on YourApp's SEO tips</p>
+                    <p>4 hours ago</p>
+                </div>  
+                <div>
+                    <!-- arrow image -->
+                </div>    
+                <hr>    
+            </div>
+           
+            <div class="user-activity">
+                <img src="images/member-2.jpg" alt="member-2" class="small">
+                <div>
+                    <p>Dale Byrd liked the post Facebook changes in 2020</p>
+                    <p>5 hours ago</p>
+                </div> 
+                <div>
+                    <!-- arrow image -->
+                </div>  
+                <hr>        
+            </div>
+            
+            <div class="user-activity">
+                <img src="images/member-3.jpg" alt="member-3" class="small">
+                <div>
+                    <p>Dawn Wood commented on Facebook changes in 2020</p>
+                    <p>6 hours ago</p>
+                </div> 
+                <div>
+                    <!-- arrow image -->
+                </div>   
+                <hr>       
+            </div>
+            
+            <div class="user-activity">
+                <img src="images/member-4.jpg" alt="member-4" class="small">
+                <div>
+                    <p>Dan Oliver posted YourApp's SEO Tips</p>
+                    <p>6 hours ago</p>
+                </div> 
+                <div>
+                    <!-- arrow image -->
+                </div>          
+            </div>
+        </section>
+
+        <!-- Message user -->
+        <section class="widget-container">
+            <h3>message user</h3>
+            <input type="text" id="userField" class="form-field" placeholder="Search for User">
+
+            <textarea name="message-user" class="form-area" id="messageField" placeholder="Message for User"></textarea>
+
+            <button class="button-primary">Send</button>
+        </section>
+
+        <!-- Settings -->
+        <section class="settings">
+            <h3>Settings</h3>
+
+            <!-- custom css toggle code -->
+            <p>Send Email Notifications</p>
+
+            <!-- custom css toggle code -->
+            <p>Set profile to public</p>
+
+            <select name="timezone" class="form-field" id="timezone">
+                <option disabled selected>Select a time zone</option>
+                <option value="Eastern">Eastern</option>
+                <option value="Central">Central</option>
+                <option value="Mountain">Mountain</option>
+                <option value="Pacific">Pacific</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Hawaii">Hawaii</option>
+            </select>
+            <div>
+                <button class="button-primary" id="save">Save</button>
+                <button class="button-disabled" id="cancel">Cancel</button>
+            </div>
+        </section>
+
+    </main>
+    
+</body>
+</html>
