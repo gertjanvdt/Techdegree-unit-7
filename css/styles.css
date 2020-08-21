@@ -1,5 +1,6 @@
 * {
     font-family: 'Libre Franklin', sans-serif;
+    /* box-sizing: border-box; */
 }
 
 /* Whole page controls */
@@ -11,16 +12,20 @@
         "header"
         "navigation"
         "main";
-    max-width: 100%;
 }
 
 h3 {
-    margin: 1.5em 2em;
     text-transform: uppercase;
+    text-align: center;
 }
 
 img {
-    max-width: 100%;
+    max-width: 80%;
+    padding: 1em;
+}
+
+hr {
+    margin: 0;
 }
 
 /* Header and navigation */
@@ -28,7 +33,14 @@ header {
     background: #a1a09d;
     color: white;
     grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 } 
+
+header h4 {
+    display: none;
+}
 
 .small {
     border-radius: 50%;
@@ -41,17 +53,25 @@ header {
     color: white;
 }
 
+/* main header area and search*/
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header div {
+    width: 50%;
+    border-bottom: 2px solid black;
+}
+
 /* Main area with graphs */
 
 main {
     grid-area: main;
 }
 
-/* Traffic graph */
-.traffic-header {
-    display: flex;
-}
-
+/* Traffic graph */ 
 ul {
     list-style: none;
     text-align: center;
@@ -97,7 +117,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 1em;
+    margin: 0 .5em;
 }
 
 .member img,
@@ -105,6 +125,69 @@ li {
     margin: .3em .3em;
 }
 
-.member p {
-   margin: .3em
+/* message user block */
+
+.message-inputs {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
 }
+
+.message-inputs input,
+.message-inputs button{
+    height: 2em;
+    width: 80%;
+    margin: .8em auto;
+}
+
+textarea {
+    height: 5em;
+    width: 80%;
+    margin: .8em auto;
+}
+
+/* settings area */
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: auto;
+    
+}
+
+select {
+    height: 2em;
+    margin-top: .8em;
+    margin-bottom: .8em
+}
+
+.settings div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.settings button {
+    height: 2em;
+    width: 45%;
+}
+
+footer {
+    margin: 2em auto;
+    max-width: 80%;
+}
+
+@media (min-width: 768px) {
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "header header"
+            "navigation navigation"
+            "main main";
+    }
+}
+

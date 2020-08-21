@@ -14,9 +14,9 @@
         <h1>YourApp</h1>
         <div class="bell-icon">
             <!-- <img src="icons/icon-bell.svg" alt="bell-icon"> -->
+            <img src="images/profile_pic.jpeg" alt="user-img" class="small">
+            <h4>Gertjan van der Toorn</h4>
         </div>
-        <img src="images/profile_pic.jpeg" alt="user-img" class="small">
-        <h4>Gertjan van der Toorn</h4>
     </header>
 
     <main>
@@ -129,10 +129,9 @@
                     <p>Victoria Chambers</p>
                     <a href="" class="member-email">victoria.chambers@yourapp.com</a>
                 </div>  
-                <p>19/8/2020</p>
-                <hr>
+                <p>19/8/2020</p>  
             </div>
-            
+            <hr>
             <div class="member">      
                 <img src="images/member-2.jpg" alt="member-2" class="small">
                 <div>
@@ -140,9 +139,8 @@
                     <a href="" class="member-email">dale.byrd@yourapp.com</a>
                 </div>  
                 <p>19/8/2020</p>
-                <hr>
             </div>  
-            
+            <hr>
             <div class="member">
                 <img src="images/member-3.jpg" alt="member-3" class="small">
                 <div>
@@ -150,9 +148,9 @@
                     <a href="" class="member-email">dawn.wood@yourapp.com</a>
                 </div>
                 <p>19/8/2020</p>
-                <hr>
+                
             </div>        
-            
+            <hr>
             <div class="member">
                 <img src="images/member-4.jpg" alt="member-4" class="small">
                 <div>
@@ -178,7 +176,7 @@
                 </div>    
                 <hr>    
             </div>
-           
+            <hr>
             <div class="user-activity">
                 <img src="images/member-2.jpg" alt="member-2" class="small">
                 <div>
@@ -190,7 +188,7 @@
                 </div>  
                 <hr>        
             </div>
-            
+            <hr>
             <div class="user-activity">
                 <img src="images/member-3.jpg" alt="member-3" class="small">
                 <div>
@@ -202,7 +200,7 @@
                 </div>   
                 <hr>       
             </div>
-            
+            <hr>
             <div class="user-activity">
                 <img src="images/member-4.jpg" alt="member-4" class="small">
                 <div>
@@ -218,11 +216,14 @@
         <!-- Message user -->
         <section class="widget-container">
             <h3>message user</h3>
-            <input type="text" id="userField" class="form-field" placeholder="Search for User">
 
-            <textarea name="message-user" class="form-area" id="messageField" placeholder="Message for User"></textarea>
+            <div class="message-inputs">
+                <input type="text" id="userField" class="form-field" placeholder="Search for User">
 
-            <button class="button-primary">Send</button>
+                <textarea name="message-user" class="form-area" id="messageField" placeholder="Message for User"></textarea>
+
+                <button class="button-primary">Send</button>
+             </div>
         </section>
 
         <!-- Settings -->
@@ -249,6 +250,13 @@
                 <button class="button-disabled" id="cancel">Cancel</button>
             </div>
         </section>
+        
+        <footer>
+            <hr>
+            <div>
+                <p>YourApp &copy; all rights reserved.</p>
+            </div>
+        </footer>
 
     </main>
     
