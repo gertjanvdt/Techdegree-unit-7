@@ -28,6 +28,11 @@ hr {
     margin: 0;
 }
 
+.widget-container-full,
+.widget-container-half {
+    width: 95vw;
+}
+
 /* Header and navigation */
 header {
     background: #a1a09d;
@@ -36,6 +41,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    grid-area: header;
 } 
 
 header h4 {
@@ -44,7 +50,7 @@ header h4 {
 
 .small {
     border-radius: 50%;
-    max-width: 50px;
+    max-width: 3em;
 }
 
 .navigation {
@@ -54,6 +60,14 @@ header h4 {
 }
 
 /* main header area and search*/
+main nav {
+    grid-area: navigation;
+}
+
+main {
+    grid-area: main;
+}
+
 .main-header {
     display: flex;
     align-items: center;
@@ -120,11 +134,6 @@ li {
     margin: 0 .5em;
 }
 
-.member img,
-.user-activity img {
-    margin: .3em .3em;
-}
-
 /* message user block */
 
 .message-inputs {
@@ -150,22 +159,23 @@ textarea {
 
 .settings {
     display: flex;
-    flex-direction: column;
-    max-width: 80%;
-    margin: auto;
-    
+    flex-direction: column;  
+}
+
+.settings-div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+}
+
+.settings-buttons {
+    flex-direction: row;
 }
 
 select {
     height: 2em;
     margin-top: .8em;
     margin-bottom: .8em
-}
-
-.settings div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;    
 }
 
 .settings button {
@@ -175,19 +185,76 @@ select {
 
 footer {
     margin: 2em auto;
-    max-width: 80%;
+    width: 80%;
 }
 
 @media (min-width: 768px) {
 
     .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 55px 1fr;
         grid-template-areas: 
             "header header"
-            "navigation navigation"
-            "main main";
+            "navigation main";
     }
+    
+    nav {
+        grid-area: navigation;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .widget-container-full {
+        width: 90vw;
+    }
+
+    .widget-container-half {
+        width: 45vw;
+    }
+
+    .traffic,
+    .social,
+    .main-header,
+    footer {
+        grid-column: 1 / span 2;
+    }
+
+    .daily,
+    .members,
+    .message {
+        grid-column: 1 / span 1;
+    }
+
+    .mobile,
+    .activity,
+    .settings {
+        grid-column: 2 / span 1;
+    }
+
+    .bell-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    header h4 {
+        display: inherit;
+    }
+
+    .traffic-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+    }
+
+    .social-layout {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+   
 }
 

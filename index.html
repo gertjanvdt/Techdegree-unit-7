@@ -19,15 +19,15 @@
         </div>
     </header>
 
-    <main>
-        <!-- Nav bar with svg icons -->
-        <nav class="navigation">
-            <a href="#"><img src="" alt="calendar"></a>
-            <a href="#"><img src="" alt="people"></a>
-            <a href="#"><img src="" alt="stats"></a>
-            <a href="#"><img src="" alt="settings"></a>
-        </nav>
+    <!-- Nav bar with svg icons -->
+    <nav class="navigation">
+        <a href="#"><img src="" alt="calendar"></a>
+        <a href="#"><img src="" alt="people"></a>
+        <a href="#"><img src="" alt="stats"></a>
+        <a href="#"><img src="" alt="settings"></a>
+    </nav>
 
+    <main>
         <!-- Dashboard header and searchbar -->
         <div class="main-header">
             <h2 class="headline">Dashboard</h2>
@@ -81,46 +81,47 @@
         </section>
 
         <!-- Social stats graph -->
-        <section class="social-stats">
+        <section class="social">
             <h3>social stats</h3>
-            <div class="social-container">
-                <div class="social-image">
-                    <!-- image of social media goes here -->
-                    <img src="images/twitter-logo.png" alt="" class="small">
+            <div class="social-layout">
+                <div class="social-container">
+                    <div class="social-image">
+                        <!-- image of social media goes here -->
+                        <img src="images/twitter-logo.png" alt="" class="small">
+                    </div>
+                    <div class="social-text">
+                        <p class="social-name">Twitter</p>
+                        <p class="social-number">12,809</p>
+                    </div>
                 </div>
-                <div class="social-text">
-                    <p class="social-name">Twitter</p>
-                    <p class="social-number">12,809</p>
+
+                <div class="social-container">
+                    <div class="social-image">
+                        <!-- image of social media goes here -->
+                        <img src="images/facebook-logo.png" alt="" class="small">
+                    </div>
+                    <div class="social-text">
+                        <p class="social-name">Facebook</p>
+                        <p class="social-number">9,325</p>
+                    </div>
+                </div>
+
+                <div class="social-container">
+                    <div class="social-image">
+                        <!-- image of social media goes here -->
+                        <img src="images/google-logo.png" alt="" class="small">
+                    </div>
+                    <div class="social-text">
+                        <p class="social-name">Google+</p>
+                        <p class="social-number">3,725</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="social-container">
-                <div class="social-image">
-                    <!-- image of social media goes here -->
-                    <img src="images/facebook-logo.png" alt="" class="small">
-                </div>
-                <div class="social-text">
-                    <p class="social-name">Facebook</p>
-                    <p class="social-number">9,325</p>
-                </div>
-            </div>
-
-            <div class="social-container">
-                <div class="social-image">
-                    <!-- image of social media goes here -->
-                    <img src="images/google-logo.png" alt="" class="small">
-                </div>
-                <div class="social-text">
-                    <p class="social-name">Google+</p>
-                    <p class="social-number">3,725</p>
-                </div>
-            </div>
-
         </section>
             
 
         <!-- New members overview -->
-       <section class="new-members">
+       <section class="members">
             <h3>new members</h3>
 
             <div class="member">
@@ -214,7 +215,7 @@
         </section>
 
         <!-- Message user -->
-        <section class="widget-container">
+        <section class="widget-container message">
             <h3>message user</h3>
 
             <div class="message-inputs">
@@ -230,26 +231,29 @@
         <section class="settings">
             <h3>Settings</h3>
 
-            <!-- custom css toggle code -->
-            <p>Send Email Notifications</p>
+            <div class="settings-div">
+                <!-- custom css toggle code -->
+                <p>Send Email Notifications</p>
 
-            <!-- custom css toggle code -->
-            <p>Set profile to public</p>
+                <!-- custom css toggle code -->
+                <p>Set profile to public</p>
 
-            <select name="timezone" class="form-field" id="timezone">
-                <option disabled selected>Select a time zone</option>
-                <option value="Eastern">Eastern</option>
-                <option value="Central">Central</option>
-                <option value="Mountain">Mountain</option>
-                <option value="Pacific">Pacific</option>
-                <option value="Alaska">Alaska</option>
-                <option value="Hawaii">Hawaii</option>
-            </select>
-            <div>
-                <button class="button-primary" id="save">Save</button>
-                <button class="button-disabled" id="cancel">Cancel</button>
+                <select name="timezone" class="form-field" id="timezone">
+                    <option disabled selected>Select a time zone</option>
+                    <option value="Eastern">Eastern</option>
+                    <option value="Central">Central</option>
+                    <option value="Mountain">Mountain</option>
+                    <option value="Pacific">Pacific</option>
+                    <option value="Alaska">Alaska</option>
+                    <option value="Hawaii">Hawaii</option>
+                </select>
+                <div class="settings-buttons">
+                    <button class="button-primary" id="save">Save</button>
+                    <button class="button-disabled" id="cancel">Cancel</button>
+                </div>
             </div>
         </section>
+        
         
         <footer>
             <hr>
