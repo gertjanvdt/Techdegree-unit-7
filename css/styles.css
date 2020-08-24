@@ -1,6 +1,6 @@
 * {
     font-family: 'Libre Franklin', sans-serif;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 /* Whole page controls */
@@ -19,11 +19,6 @@ h3 {
     text-align: center;
 }
 
-img {
-    max-width: 80%;
-    padding: 1em;
-}
-
 hr {
     margin: 0;
 }
@@ -31,11 +26,12 @@ hr {
 .widget-container-full,
 .widget-container-half {
     width: 95vw;
+    margin: auto;
 }
 
 /* Header and navigation */
 header {
-    background: #a1a09d;
+    background: rgba(116, 119, 191, .3);
     color: white;
     grid-area: header;
     display: flex;
@@ -50,13 +46,21 @@ header h4 {
 
 .small {
     border-radius: 50%;
-    max-width: 3em;
+    width: 3em;
 }
 
 .navigation {
     grid-area: navigation;
     background: #403f3e;
     color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icon {
+    width: 2.5em;
+    margin: .5em;
 }
 
 /* main header area and search*/
@@ -70,13 +74,46 @@ main {
 
 .main-header {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
+    margin-bottom: 1em;
 }
 
-.main-header div {
-    width: 50%;
-    border-bottom: 2px solid black;
+.main-header-search {
+    width: 75vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #7477BF;
+    border-left: 1px solid #7477BF;
+    background: #f2f2f2;
+}
+
+.search-bar {
+    margin: 0 1em;
+    height: 2em;
+    width: 15em;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid #7477BF;
+}
+
+.headline {
+    margin: 1em;
+}
+
+.alert-banner {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    background: #7477BF;
+    border-radius: 10px;
+    color: white;
+}
+
+.alert-banner p {
+    margin: 1em;
 }
 
 /* Main area with graphs */
@@ -95,6 +132,11 @@ ul {
 li {
     display: inline-block;
     padding: 0 1em;
+}
+
+.active {
+    background: #9de05a;
+    border-radius: 10px;
 }
 
 /* Social stats section */
@@ -145,21 +187,31 @@ li {
 .message-inputs input,
 .message-inputs button{
     height: 2em;
-    width: 80%;
-    margin: .8em auto;
+    width: 100%;
+    margin: auto;
+}
+
+.message-inputs button {
+    background: #7477BF;
+    border: none;
+    border-radius: 10px;
 }
 
 textarea {
     height: 5em;
-    width: 80%;
-    margin: .8em auto;
+    width: 100%;
+    margin: .8em 0;
 }
 
 /* settings area */
 
-.settings {
+.settings,
+.message {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .settings-div {
@@ -170,6 +222,8 @@ textarea {
 
 .settings-buttons {
     flex-direction: row;
+    display: flex;
+    justify-content: space-between;
 }
 
 select {
@@ -178,11 +232,29 @@ select {
     margin-bottom: .8em
 }
 
+.switch-light {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5em;
+}
+
 .settings button {
     height: 2em;
     width: 45%;
+    border: none;
+    border-radius: 10px;
 }
 
+#save {
+    background: #7477BF;
+}
+
+.switch-label {
+    width: 80%;
+}
+
+/* Footer area */
 footer {
     margin: 2em auto;
     width: 80%;
@@ -197,8 +269,10 @@ footer {
             "navigation main";
     }
     
-    nav {
+    .navigation {
         grid-area: navigation;
+        justify-content: flex-start;
+        flex-direction: column;
     }
 
     main {
@@ -206,12 +280,18 @@ footer {
         grid-template-columns: 50% 50%;
     }
 
+    .alert {
+        grid-column: 1 / span 2;
+    }
+
     .widget-container-full {
         width: 90vw;
+        margin: auto;
     }
 
     .widget-container-half {
         width: 45vw;
+        margin: auto;
     }
 
     .traffic,
@@ -248,6 +328,10 @@ footer {
         justify-content: space-between;
         width: 90%;
         margin: auto;
+    }
+
+    .traffic-nav-link:hover {
+        cursor: pointer;
     }
 
     .social-layout {
