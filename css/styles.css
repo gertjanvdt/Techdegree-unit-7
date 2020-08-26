@@ -47,6 +47,7 @@ header h4 {
 .small {
     border-radius: 50%;
     width: 3em;
+    margin: 0 .5em;
 }
 
 .navigation {
@@ -56,6 +57,12 @@ header h4 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    margin: 0 1em;
 }
 
 .icon {
@@ -142,7 +149,7 @@ li {
 /* Social stats section */
 
 .social-container {
-    border: 2px solid #403f3e;
+    border: 1px solid #7477BF;
     max-width: 60%;
     margin: 1em auto;
     display: flex;
@@ -166,15 +173,45 @@ li {
     margin: .2em;
 }
 
+.social-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #7477BF;
+  }
+
 /* User blocks */
 
-.member,
-.user-activity {
+.members,
+.recent-activity {
+    width: 95%;
+    margin: auto;
+}
+
+.members p,
+.recent-activity p {
+    font-size: 14px;
+}
+
+.member {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 .5em;
+    height: 4.5em;
 }
+
+.user-activity {
+    display: flex;
+    align-items: center;
+    height: 4.5em;
+}
+
+.member-info {
+    display: flex;
+    align-items: center;
+}
+
+
 
 /* message user block */
 
@@ -185,10 +222,13 @@ li {
 }
 
 .message-inputs input,
-.message-inputs button{
+.message-inputs button,
+select{
     height: 2em;
     width: 100%;
     margin: auto;
+    border: 1px solid #7477BF;
+    border-radius: 10px;
 }
 
 .message-inputs button {
@@ -201,6 +241,8 @@ textarea {
     height: 5em;
     width: 100%;
     margin: .8em 0;
+    border: 1px solid #7477BF;
+    border-radius: 10px;
 }
 
 /* settings area */
@@ -210,7 +252,7 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -227,9 +269,7 @@ textarea {
 }
 
 select {
-    height: 2em;
-    margin-top: .8em;
-    margin-bottom: .8em
+    margin: .8em 0;
 }
 
 .switch-light {
@@ -257,7 +297,7 @@ select {
 /* Footer area */
 footer {
     margin: 2em auto;
-    width: 80%;
+    width: 95%;
 }
 
 @media (min-width: 768px) {
