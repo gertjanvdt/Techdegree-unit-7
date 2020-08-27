@@ -294,3 +294,55 @@ ul.addEventListener('click', (e) => {
         ul.removeChild(ul.firstChild)
     }
 });
+
+// ***** LOCAL STORAGE FOR SETTNGS *****
+const emailCheck = document.getElementById('email-check');
+const profileCheck = document.getElementById('profile-check');
+const timeZone = document.getElementById('timezone');
+const save = document.getElementById('save');
+const cancel = document.getElementById('cancel');
+
+function supportLocalStorage () {
+    return 'localstorage' in window && window['localStorage'] !== null;
+}
+
+// Function to set email preference
+function setEmail() {
+    if (emailCheck.checked === true) {
+        localStorage.setItem('emailCheck', 'true')
+    } else {
+        localStorage.setItem('emailCheck', 'false')
+    }
+};
+
+//  Function to set profile preferenece
+function setProfile() {
+    if (profileCheck.checked === true) {
+        localStorage.setItem('profileCheck', 'true');
+    } else {
+        localStorage.setItem('profileCheck', 'false');
+    }
+};
+
+// Function set time zone
+function setTimeZone() {
+    let chosenTimeZone = timeZone.value;
+    localStorage.setItem('timeZone', chosenTimeZone);
+};
+
+// Listen for save click and execute preference functions
+save.addEventListener('click', (e) => {
+    if (timeZone.value === 'Select a time zone') {
+        alert('Please select a timezone before saving')
+    } else {
+        setEmail();
+        setProfile();
+        setTimeZone();
+        alert('Your settings have been saved successfully')
+    }  
+});
+
+cancel.addEventListener('click', (e) => {
+    localStorage.clear();
+    alert('Your settings have been removed successfully')
+});

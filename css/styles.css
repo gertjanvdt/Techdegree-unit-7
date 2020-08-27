@@ -421,7 +421,8 @@ footer {
     }
 
     .traffic-nav-link:hover,
-    .list p{
+    .list p,
+    .alert-banner-close{
         cursor: pointer;
     }
 
@@ -430,15 +431,6 @@ footer {
         align-items: center;
         justify-content: space-evenly;
     }
-
-    /* HEADER */
-
-    /* .list {
-        position: absolute;
-        z-index: 10000;
-        top: 40px;
-        left: 70%;
-    } */
    
 }
 
