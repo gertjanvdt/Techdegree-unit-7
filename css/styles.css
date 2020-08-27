@@ -93,8 +93,8 @@ header h4 {
 .list {
     position: absolute;
     z-index: 10000;
-    top: 40px;
-    left: 30%;
+    /* top: 40px;
+    left: 30%; */
 }
 
 .list li {
@@ -274,6 +274,12 @@ select{
     border-radius: 10px;
 }
 
+#userlist {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 25em;
+}
+
 .message-inputs button {
     background: #7477BF;
     border: none;
@@ -414,7 +420,8 @@ footer {
         margin: auto;
     }
 
-    .traffic-nav-link:hover {
+    .traffic-nav-link:hover,
+    .list p{
         cursor: pointer;
     }
 
@@ -426,12 +433,12 @@ footer {
 
     /* HEADER */
 
-    .list {
+    /* .list {
         position: absolute;
         z-index: 10000;
         top: 40px;
         left: 70%;
-    }
+    } */
    
 }
 
@@ -439,13 +446,6 @@ footer {
 
     .grid-container {
         grid-template-columns: 80px 1fr;
-    }
-
-    .list {
-        position: absolute;
-        z-index: 10000;
-        top: 40px;
-        left: 45%;
     }
 
     .search-bar {

@@ -246,4 +246,51 @@ send.addEventListener('click', (e) => {
     'Frank Underwood',
     'Michael Scott',
     'Carrie Mathison',
+    'Jackson Teller',
+    'Marty Byrde',
+    'Claire Fraser'
  ];
+
+const div = document.getElementById('searchResults');
+const ul = document.getElementById('userlist');
+
+// check if input is present in user list
+user.addEventListener('input', (e) => {
+    let searchInput = user.value.toUpperCase();
+    // let div = document.getElementById('searchResults');
+    let list = document.getElementById('userlist');
+    // list.id = 'userlist';
+    
+    while (ul.hasChildNodes()) {
+        ul.removeChild(ul.firstChild)
+    }
+
+    for (let i = 0; i < users.length; i++) {
+        let userName = users[i].toLocaleUpperCase();
+
+        if (userName.indexOf(searchInput) > -1) {
+            let element = document.createElement('li');
+            element.textContent = users[i];
+            if (user.value !== '') {
+                list.appendChild(element);
+            }
+            
+        } 
+    }
+    if (user.value === '') {
+        while (ul.hasChildNodes()) {
+            ul.removeChild(ul.firstChild)
+        }
+    }
+});
+
+// fill user that is clicked on and remove list
+ul.addEventListener('click', (e) => {
+    let userFromList = e.target.textContent
+    console.log(userFromList);
+    user.value = userFromList;
+
+    while (ul.hasChildNodes()) {
+        ul.removeChild(ul.firstChild)
+    }
+});
