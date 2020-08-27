@@ -6,13 +6,41 @@ const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("send");
 const graphTime = document.querySelector('.traffic-nav-links');
+const bellIcon = document.querySelector('.notify');
+const notifyIcon = document.querySelector('.notification-icon');
+const notifyList = document.querySelector('.list');
 
+// ***** NOTIFICATION ICON *****
+
+// If bell icon is clicked display notifications
+bellIcon.addEventListener('click', (e) => {    
+    if (notifyList.className === 'list unhidden') {
+        notifyList.className = 'list hidden';
+    } else {
+        notifyList.className = 'list unhidden';
+    }
+});
+
+// Check if one notification will be closed
+notifyList.addEventListener('click', (e) => {
+    if (e.target.innerHTML === 'X'){
+        e.target.parentNode.remove();
+    }
+    removeNotifyIcon();
+});
+
+// Function to remove the notification ball when no more notifcations
+function removeNotifyIcon() {
+    if (notifyList.firstElementChild === null) { 
+        notifyIcon.style.opacity =  '0'; 
+    } 
+}
 
 // ***** ALERT BANNER *****
 alertBanner.innerHTML = 
    ` 
    <div class="alert-banner">
-    <p><strong>Alert:</strong> You have <strong>12</strong> unread messages</p>
+    <p><span>&#9888;</span><strong> Alert:</strong> You have <strong>12</strong> unread messages</p>
     <p class="alert-banner-close">x</p>
     </div>
     `;
@@ -206,3 +234,16 @@ send.addEventListener('click', (e) => {
         alert(`Message send to ${user.value}`);
     }
 });
+
+// ***** AUTO COMPLETE *****
+ const users = [
+    'Victoria Chambers',
+    'Dale Byrd',
+    'Dawn Wood',
+    'Dan Oliver',
+    'Peter Griffin',
+    'Walter White',
+    'Frank Underwood',
+    'Michael Scott',
+    'Carrie Mathison',
+ ];

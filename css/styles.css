@@ -70,6 +70,49 @@ header h4 {
     margin: .5em;
 }
 
+.notify:hover {
+    animation: swing 1s ease-in-out backwards;
+}
+
+.notification-icon {
+    height: 10px;
+    width: 10px;
+    background: green;
+    border-radius: 50%;
+    margin: 0 0 0 auto; 
+}
+
+.notifcation {
+	position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.list {
+    position: absolute;
+    z-index: 10000;
+    top: 40px;
+    left: 30%;
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	background: #ccc;
+	margin: 4px;
+	padding: 4px;
+    list-style-type: none;
+    border: 1px solid #7477BF;
+    border-radius: 10px;
+}
+
+.list p {
+    margin: 1em;
+}
+
 /* main header area and search*/
 main nav {
     grid-area: navigation;
@@ -302,6 +345,7 @@ footer {
 
 @media (min-width: 768px) {
 
+    /* Whole page layout items */
     .grid-container {
         grid-template-columns: 55px 1fr;
         grid-template-areas: 
@@ -379,6 +423,47 @@ footer {
         align-items: center;
         justify-content: space-evenly;
     }
+
+    /* HEADER */
+
+    .list {
+        position: absolute;
+        z-index: 10000;
+        top: 40px;
+        left: 70%;
+    }
    
 }
 
+@media (min-width: 1024px) {
+
+    .grid-container {
+        grid-template-columns: 80px 1fr;
+    }
+
+    .list {
+        position: absolute;
+        z-index: 10000;
+        top: 40px;
+        left: 45%;
+    }
+
+    .search-bar {
+        width: 25em;
+    }
+}
+
+@keyframes swing {
+    25% {
+        transform: rotate(25deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-25deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
