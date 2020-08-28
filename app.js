@@ -331,18 +331,18 @@ function reset(){
     profileCheck.checked = false;
     timeZone.value = 'Select a time zone';
     localStorage.clear();
-    alert('Your settings have been removed successfully')
+    alert('Your settings have been removed successfully');
 };
 
 // Listen for save click and execute preference functions
 save.addEventListener('click', (e) => {
     if (timeZone.value === 'Select a time zone') {
-        alert('Please select a timezone before saving')
+        alert('Please select a timezone before saving');
     } else {
         setEmail();
         setProfile();
         setTimeZone();
-        alert('Your settings have been saved successfully')
+        alert('Your settings have been saved successfully');
     }  
 });
 
