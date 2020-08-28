@@ -296,15 +296,11 @@ ul.addEventListener('click', (e) => {
 });
 
 // ***** LOCAL STORAGE FOR SETTNGS *****
-const emailCheck = document.getElementById('email-check');
-const profileCheck = document.getElementById('profile-check');
-const timeZone = document.getElementById('timezone');
+let emailCheck = document.getElementById('email-check');
+let profileCheck = document.getElementById('profile-check');
+let timeZone = document.getElementById('timezone');
 const save = document.getElementById('save');
 const cancel = document.getElementById('cancel');
-
-function supportLocalStorage () {
-    return 'localstorage' in window && window['localStorage'] !== null;
-}
 
 // Function to set email preference
 function setEmail() {
@@ -326,8 +322,16 @@ function setProfile() {
 
 // Function set time zone
 function setTimeZone() {
-    let chosenTimeZone = timeZone.value;
-    localStorage.setItem('timeZone', chosenTimeZone);
+    localStorage.setItem('timeZone', timeZone.value);
+};
+
+// Function to reset upon cancel
+function reset(){
+    emailCheck.checked = false;
+    profileCheck.checked = false;
+    timeZone.value = 'Select a time zone';
+    localStorage.clear();
+    alert('Your settings have been removed successfully')
 };
 
 // Listen for save click and execute preference functions
@@ -343,6 +347,28 @@ save.addEventListener('click', (e) => {
 });
 
 cancel.addEventListener('click', (e) => {
-    localStorage.clear();
-    alert('Your settings have been removed successfully')
+    reset();
 });
+
+// ***** RETREIVE LOCAL STORAGE *****
+function getLocalStorageItems() {
+    let localEmailCheck = localStorage.getItem('emailCheck');
+    let localProfileCheck = localStorage.getItem('profileCheck');
+    let localTimeZone = localStorage.getItem('timeZone');
+
+    if (localTimeZone !== null) {
+        timeZone.value = localTimeZone;
+    } 
+    if (localEmailCheck === 'true') {
+        emailCheck.checked = true;
+    }
+    
+    if (localProfileCheck === 'true') {
+        profileCheck.checked = true;
+    }   
+}
+
+Object.onload = getLocalStorageItems();
+
+
+
