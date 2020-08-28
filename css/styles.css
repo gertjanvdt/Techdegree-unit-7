@@ -201,6 +201,13 @@ li {
     border-radius: 8px;
 }
 
+#twitter,
+#google,
+#facebook {
+    transform: scale(.6);
+    transform-origin: center;
+}
+
 .social-container img {
     margin: 1em;
 }
@@ -217,10 +224,11 @@ li {
 }
 
 .social-image {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background-color: #7477BF;
+    margin: 1em;
   }
 
 /* User blocks */
