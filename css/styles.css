@@ -141,7 +141,8 @@ main {
 .search-bar {
     margin: 0 1em;
     height: 2em;
-    width: 12em;
+    width: 50%;
+    max-width: 12em;
     border: none;
     border-radius: 10px;
     border: 1px solid #7477BF;
@@ -458,7 +459,7 @@ footer {
     }
 
     .search-bar {
-        width: 25em;
+        max-width: 25em;
     }
     
 }
