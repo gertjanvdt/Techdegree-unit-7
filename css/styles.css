@@ -6,7 +6,6 @@
 /* Whole page controls */
 .grid-container {
     display: grid;
-    grid-template-columns: auto 100%;
     grid-template-rows: auto;
     grid-template-areas: 
         "header"
@@ -130,7 +129,7 @@ main {
 }
 
 .main-header-search {
-    width: 75vw;
+    width: 75%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -142,14 +141,14 @@ main {
 .search-bar {
     margin: 0 1em;
     height: 2em;
-    width: 15em;
+    width: 12em;
     border: none;
     border-radius: 10px;
     border: 1px solid #7477BF;
 }
 
 .headline {
-    margin: 1em;
+    margin: .8em;
 }
 
 .alert-banner {
