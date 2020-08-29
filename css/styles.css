@@ -193,7 +193,7 @@ li {
 
 .social-container {
     border: 1px solid #7477BF;
-    max-width: 60%;
+    width: 90%;
     margin: 1em auto;
     display: flex;
     align-items: center;
@@ -438,6 +438,16 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+    }
+
+    .social-container {
+        border: 1px solid #7477BF;
+        margin: 1em auto;
+        display: flex;
+        align-items: center;
+        background: #f2f2f2 ;
+        border-radius: 8px;
+        width: 30%;
     }
    
 }
